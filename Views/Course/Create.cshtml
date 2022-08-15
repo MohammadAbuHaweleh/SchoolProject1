@@ -1,0 +1,26 @@
+﻿@model List<Teachers>
+<h3> Pleace Enter Info To New Course</h3>
+
+<div>
+    <form action="Create" method="post">
+        <div><label>Course Name:</label></div>
+        <input type="text" id="CName" name="CourseName" placeholder=" Enter Your Name ...." />
+        <br />
+
+        <div><label>Course Capacity:</label></div>
+        <input type="number" id="CCapacity" name="CourseCapacity" />
+        <br />
+
+        <div><label>Select Teacher</label></div>
+        <select id="Tname" name="TeacherId">
+            @foreach (Teachers teachers in Model)
+            {
+                <option value="@teachers.TeacherId">@teachers.TeacherName</option>
+            }
+
+        </select>
+        
+        <input type="submit" value="ADD Course">
+
+    </form>
+</div>

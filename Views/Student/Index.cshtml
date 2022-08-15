@@ -1,0 +1,35 @@
+﻿@model List<Student>
+
+
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>IS Active</th>
+            <th>Student Photo</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Student student in Model)
+        {
+            <tr>
+                <td>@student.StudentName</td>
+                <td>@student.StudentAge</td>
+                <td>@student.IsActive</td>
+                <td><img src="/StudentPicture/@student.PhotoName" width="70" height="70"/></td>
+                <td><a href="/Student/Delete/@student.StudentId">Delete</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<button>
+    <a href="/Student/Create"> <span>Add Student</span>  </a>
+</button>
+<br />
+@ViewBag.username
+<br />
+@ViewData["Message"]

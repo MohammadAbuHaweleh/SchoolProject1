@@ -1,0 +1,27 @@
+﻿
+<h3> Pleace Enter Info To New Student</h3>
+
+<div>
+    <form action="Create" method="post" enctype="multipart/form-data">
+        <!--اذا فايل عندك بالفورم ابعثه على الاكشن ميثود كريت-->
+        <div><label>Student Name:</label></div>
+        <input type="text" id="SName" name="StudentName" placeholder=" Enter Your Name ...." />
+        <br />
+
+        <div><label>Student Age:</label></div>
+        <input type="text" id="SAge" name="StudentAge" placeholder=" Enter Your Age .... " />
+        <br />
+
+        <label>Student Photo :</label>
+
+        <input type="checkbox" id="Active" name="IsActive" value="true" checked />
+        <br />
+
+        <div><label>Student Photo:</label></div>
+        <input  type="file" name="StudentPhoto"/>
+        <br />
+
+        <input type="submit" value="ADD Student">
+
+    </form>
+</div>
